@@ -18,20 +18,27 @@ class ViewController: UIViewController {
    
     @IBAction func buttonPushed(_ sender: Any) {
         
-    myCoolLabel.text = "Answer: \(Double(TextField1.text!)! + Double(TextField2.text!)!)"
+        let addition = true
         
+        if addition { myCoolLabel.text = "Answer: \(Double(TextField1.text!)! + Double(TextField2.text!)!)"
+        
+    } else {
+    
+            myCoolLabel.text = "Answer: \(Double(TextField1.text!)! - Double(TextField2.text!)!)"
+    
     }
     
-    override func viewDidLoad() {
+    func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 
+}
 }
 
